@@ -5,25 +5,64 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = { 
-        title: 'Article One | Rishi Tibrewal',
-        heading: 'Article One',
-        date: 'Aug 31, 2017',
-        content: `<p>
-                        This is the content for my first article.
-                        This article was created by Rishi Tibrewal.
-                        
-                    </p>
-                    <p>
-                        This is the content for my first article.
-                        This article was created by Rishi Tibrewal.
-                        
-                    </p>
-                    <p>
-                        This is the content for my first article.
-                        This article was created by Rishi Tibrewal.
-                        
-                    </p>`
+var articles = { 
+    articleOne: { 
+            title: 'Article One | Rishi Tibrewal',
+            heading: 'Article One',
+            date: 'Aug 31, 2017',
+            content: `<p>
+                            This is the content for my first article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my first article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my first article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>`},
+    articleTwo: {
+            title: 'Article Two | Rishi Tibrewal',
+            heading: 'Article Two',
+            date: 'Aug 31, 2017',
+            content: `<p>
+                            This is the content for my second article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my second article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my second article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>`},
+    articleThree: {
+            title: 'Article Three | Rishi Tibrewal',
+            heading: 'Article Three',
+            date: 'Aug 31, 2017',
+            content: `<p>
+                            This is the content for my third article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my third article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>
+                        <p>
+                            This is the content for my third article.
+                            This article was created by Rishi Tibrewal.
+                            
+                        </p>`}
 };
 function createTemplate(data) {
     var title= data.title;
