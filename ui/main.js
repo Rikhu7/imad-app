@@ -3,7 +3,7 @@ console.log('Loaded!');
 //move the image
 var img = document.getElementById('madi');
 img.onclick = function () {
-    var interval = setInterval(moveLeft, 300);
-    img.style.marginLeft = '300px';
+    var interval = setInterval(moveRight, 300);
 };
+
 
