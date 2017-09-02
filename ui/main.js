@@ -14,10 +14,8 @@ img.onclick = function () {
 //counter
 var button = document.getElementById('counter');
 button.onclick = function() {
-    
-    //make a request to the counter endpoint
+    //create a request
     var request = new XMLhttpRequest();
-    
     //capture the response and store it in a variable
     request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE) {
@@ -31,6 +29,7 @@ button.onclick = function() {
       }  
       //not done yet
     };
+    //make a request
  
 } ;
 
