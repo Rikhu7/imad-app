@@ -30,7 +30,7 @@ button.onclick = function() {
       //not done yet
     };
     //make a request
- 
+    request.open('GET','http://rishitibrewal21.imad.hasura-app.io', true);
 } ;
 
 
