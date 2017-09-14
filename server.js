@@ -126,6 +126,14 @@ app.get('/counter', function(req,res) {
     res.send(counter.toString());
 });
 
+var names = [] ;
+app.get('/submit-name/', function (req, res)  {
+    //get the name from the user
+    var name = req.query.name; //TODO
+    names.push(names);
+    res.send(JSON.stringify(names));
+});
+
 app.get('/:articleName',function(req,res){
     //article name= article one
     //articles[articleName] == {} content object for article one
@@ -143,14 +151,6 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-
-var names = [] ;
-app.get('/submit-name/', function (req, res)  {
-    //get the name from the user
-    var name = req.query.name; //TODO
-    names.push(names);
-    res.send(JSON.stringify(names));
 });
 
 
