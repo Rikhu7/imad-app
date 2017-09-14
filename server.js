@@ -130,7 +130,7 @@ var names = [] ;
 app.get('/submit-name/', function (req, res)  {
     //get the name from the user
     var name = req.query.name; //TODO
-    names.push(names);
+    names.push(name);
     res.send(JSON.stringify(names));
 });
 
