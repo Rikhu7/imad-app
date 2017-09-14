@@ -145,11 +145,12 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/submit-name', function (req, res)  {
+var names = [] ;
+app.get('/submit-name/:name', function (req, res)  {
     //get the name from the user
-    var name; //TODO
+    var name = req.params.name; //TODO
     names.push(names);
-    res.send(names);
+    res.send(JSON.stringify(names));
 });
 
 
